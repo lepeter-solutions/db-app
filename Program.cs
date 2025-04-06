@@ -9,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<WhitelistContext>(options =>
-    options.UseSqlite("Data Source=whitelist.db"));
+        options.UseMySQL("Server=localhost;Database=books;Uid=root;"));
 
 builder.Services.AddScoped<IValidator<WhitelistEntry>, WhitelistEntry.Validator>();
 
